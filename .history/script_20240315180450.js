@@ -908,17 +908,10 @@
       newUser[key] = user[key];
     }
 
-    // console.log("newUser", newUser);
+    console.log("newUser", newUser);
   }
 
   // Spread Operator
   {
-    const user = {
-      name: "Sagar",
-      city: "Pune",
-    };
-
-    const newUser = { ...user };
-    // console.log("newUser", newUser);
   }
 }

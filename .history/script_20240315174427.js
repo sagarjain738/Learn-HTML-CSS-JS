@@ -139,7 +139,6 @@
       isSingle: true,
       getInfo,
     };
-    user.mobileNumber = 123456789;
 
     // console.log("Object Example :=>", user.hobbies[0]);
     // const aa = JSON.stringify(user);
@@ -847,78 +846,41 @@
   ]);
 
   // console.log("Test Map", testMap);
-  // const testedData = testMap.forEach((a, b) => console.log(b, a));
-  // console.log("testedData", testedData);
+  const testedData = testMap.forEach((a, b) => console.log(b, a));
+  console.log("testedData", testedData);
 }
 
 // Primitive Vs  Reference Type
-{
-  // let first = 100;
-  // let second = first;
-  // first = 68726134;
-  // second = first;
-  // let firstArray = [1, 2, 3, 4, 5];
-  // let secondArray = firstArray; //["Hello", "Hola"];
-  // firstArray.push(99999);
-  // console.log("Testing primitive Type : =>  ", secondArray);
-  // create function for caching
-}
 
-// Clonning Array
+// let first = 100;
+// let second = first;
+// first = 68726134;
+// second = first;
 
-{
-  // Traditional Way
-  {
-    const firstArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const secondArray = firstArray.slice(0);
-    firstArray.push(11);
-    firstArray.push(11);
-    firstArray.push(11);
-    firstArray.push(11);
-    // console.log("firstArray", firstArray);
-    // console.log("secondArray", secondArray);
-  }
+// let firstArray = [1, 2, 3, 4, 5];
+// let secondArray = firstArray; //["Hello", "Hola"];
+// firstArray.push(99999);
 
-  // Spread Operator
-  {
-    const firstArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const secondArray = [1000, 2000, ...firstArray, 9000, 1000];
-    firstArray.push(11);
-    firstArray.push(11);
-    firstArray.push(11);
-    firstArray.push(11);
-    // console.log("firstArray", firstArray);
-    // console.log("secondArray", secondArray);
-  }
-}
+// console.log("Testing primitive Type : =>  ", secondArray);
 
-// Clonning Object
-
-{
-  // Traditional Way
-  {
-    const user = {
-      name: "Sagar",
-      city: "Pune",
-    };
-
-    const newUser = {};
-
-    for (let key in user) {
-      newUser[key] = user[key];
+// create function for caching
+function cacheFunction(fn) {
+  let cache = {};
+  return (...args) => {
+    if (!cache[args]) {
+      cache[args] = fn(...args);
     }
-
-    // console.log("newUser", newUser);
-  }
-
-  // Spread Operator
-  {
-    const user = {
-      name: "Sagar",
-      city: "Pune",
-    };
-
-    const newUser = { ...user };
-    // console.log("newUser", newUser);
-  }
+    return cache[args];
+  };
 }
+
+let fibonacci = (n) => {
+  if (n <= 1) {
+    return n;
+  } else {
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+};
+
+fibonacci = cacheFunction(fibonacci);
+console.log("Fibonacci without Caching: ");

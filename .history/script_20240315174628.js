@@ -139,7 +139,6 @@
       isSingle: true,
       getInfo,
     };
-    user.mobileNumber = 123456789;
 
     // console.log("Object Example :=>", user.hobbies[0]);
     // const aa = JSON.stringify(user);
@@ -867,58 +866,7 @@
 // Clonning Array
 
 {
-  // Traditional Way
-  {
-    const firstArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const secondArray = firstArray.slice(0);
-    firstArray.push(11);
-    firstArray.push(11);
-    firstArray.push(11);
-    firstArray.push(11);
-    // console.log("firstArray", firstArray);
-    // console.log("secondArray", secondArray);
-  }
-
-  // Spread Operator
-  {
-    const firstArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const secondArray = [1000, 2000, ...firstArray, 9000, 1000];
-    firstArray.push(11);
-    firstArray.push(11);
-    firstArray.push(11);
-    firstArray.push(11);
-    // console.log("firstArray", firstArray);
-    // console.log("secondArray", secondArray);
-  }
-}
-
-// Clonning Object
-
-{
-  // Traditional Way
-  {
-    const user = {
-      name: "Sagar",
-      city: "Pune",
-    };
-
-    const newUser = {};
-
-    for (let key in user) {
-      newUser[key] = user[key];
-    }
-
-    // console.log("newUser", newUser);
-  }
-
-  // Spread Operator
-  {
-    const user = {
-      name: "Sagar",
-      city: "Pune",
-    };
-
-    const newUser = { ...user };
-    // console.log("newUser", newUser);
-  }
+  const firstArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const secondArray = firstArray.slice(0);
+  console.log("secondArray", secondArray);
 }

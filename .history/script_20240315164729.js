@@ -139,7 +139,6 @@
       isSingle: true,
       getInfo,
     };
-    user.mobileNumber = 123456789;
 
     // console.log("Object Example :=>", user.hobbies[0]);
     // const aa = JSON.stringify(user);
@@ -766,7 +765,7 @@
 
   // // const result2 = result.splice(1);
 
-  // console.log("Greater Result", result);
+  console.log("Greater Result", result);
 }
 
 // Destructuring Object
@@ -828,97 +827,31 @@
   // console.log(Ravina);
 }
 
-// SET
-
-{
-  // const arr = [1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 5];
-  // const ss = new Set([1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 5]);
-  // console.log("Set", ss);
-  // ss.add(5);
-  // console.log("Set", ss);
-}
-
-// Map
-
-{
-  const testMap = new Map([
-    ["a", { name: "Sagar" }],
-    [1, "hello"],
-  ]);
-
-  // console.log("Test Map", testMap);
-  // const testedData = testMap.forEach((a, b) => console.log(b, a));
-  // console.log("testedData", testedData);
-}
-
 // Primitive Vs  Reference Type
-{
-  // let first = 100;
-  // let second = first;
-  // first = 68726134;
-  // second = first;
-  // let firstArray = [1, 2, 3, 4, 5];
-  // let secondArray = firstArray; //["Hello", "Hola"];
-  // firstArray.push(99999);
-  // console.log("Testing primitive Type : =>  ", secondArray);
-  // create function for caching
+const num1 = 20;
+const num2 = new Number(20);
+console.log("num1 == num2 : ", num1 == num2);
+console.log("num1 === num2 : ", num1 === num2);
+
+const str1 = "Hello";
+const str2 = new String("Hello");
+console.log("str1 == str2 : ", str1 == str2);
+console.log("str1 === str2 : ", str1 === str2);
+
+// Object.create()
+let person = {
+  name: "John Doe",
+};
+
+let anotherPerson = Object.create(person);
+anotherPerson.name = "Jane Doe";
+console.log(anotherPerson.name);
+
+// Prototypes
+function Person(name) {
+  this.name = name;
 }
 
-// Clonning Array
-
-{
-  // Traditional Way
-  {
-    const firstArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const secondArray = firstArray.slice(0);
-    firstArray.push(11);
-    firstArray.push(11);
-    firstArray.push(11);
-    firstArray.push(11);
-    // console.log("firstArray", firstArray);
-    // console.log("secondArray", secondArray);
-  }
-
-  // Spread Operator
-  {
-    const firstArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const secondArray = [1000, 2000, ...firstArray, 9000, 1000];
-    firstArray.push(11);
-    firstArray.push(11);
-    firstArray.push(11);
-    firstArray.push(11);
-    // console.log("firstArray", firstArray);
-    // console.log("secondArray", secondArray);
-  }
-}
-
-// Clonning Object
-
-{
-  // Traditional Way
-  {
-    const user = {
-      name: "Sagar",
-      city: "Pune",
-    };
-
-    const newUser = {};
-
-    for (let key in user) {
-      newUser[key] = user[key];
-    }
-
-    // console.log("newUser", newUser);
-  }
-
-  // Spread Operator
-  {
-    const user = {
-      name: "Sagar",
-      city: "Pune",
-    };
-
-    const newUser = { ...user };
-    // console.log("newUser", newUser);
-  }
-}
+let john = new Person("John Doe");
+let jane = new Person("Jane Doe");
+jane.__proto__ = john;

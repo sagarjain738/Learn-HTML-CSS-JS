@@ -919,6 +919,6 @@
     };
 
     const newUser = { ...user };
-    // console.log("newUser", newUser);
+    console.log("newUser", newUser);
   }
 }

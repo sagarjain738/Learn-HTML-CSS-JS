@@ -139,7 +139,6 @@
       isSingle: true,
       getInfo,
     };
-    user.mobileNumber = 123456789;
 
     // console.log("Object Example :=>", user.hobbies[0]);
     // const aa = JSON.stringify(user);
@@ -888,7 +887,7 @@
     firstArray.push(11);
     firstArray.push(11);
     // console.log("firstArray", firstArray);
-    // console.log("secondArray", secondArray);
+    console.log("secondArray", secondArray);
   }
 }
 
@@ -901,24 +900,9 @@
       name: "Sagar",
       city: "Pune",
     };
-
-    const newUser = {};
-
-    for (let key in user) {
-      newUser[key] = user[key];
-    }
-
-    // console.log("newUser", newUser);
   }
 
   // Spread Operator
   {
-    const user = {
-      name: "Sagar",
-      city: "Pune",
-    };
-
-    const newUser = { ...user };
-    // console.log("newUser", newUser);
   }
 }
