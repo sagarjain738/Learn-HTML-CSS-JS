@@ -964,10 +964,6 @@
     } else {
       reject("Hello");
     }
-
-    // setInterval(() => {
-    //   resolve("Hello");
-    // }, 1000);
   });
 
   promiseExample
@@ -975,6 +971,4 @@
     .catch(function (value) {
       console.log("Rejected Promise", value);
     });
-
-  console.log(promiseExample);
 }

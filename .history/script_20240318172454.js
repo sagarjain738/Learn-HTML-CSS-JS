@@ -959,15 +959,14 @@
 
 {
   const promiseExample = new Promise(function (resolve, reject) {
-    if (!true) {
-      resolve("Hello");
-    } else {
-      reject("Hello");
-    }
-
-    // setInterval(() => {
+    // if (!true) {
     //   resolve("Hello");
-    // }, 1000);
+    // } else {
+    //   reject("Hello");
+    // }
+    setInterval(() => {
+      reject("Hello");
+    }, 1000);
   });
 
   promiseExample

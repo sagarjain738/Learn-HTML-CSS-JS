@@ -927,54 +927,13 @@
 
 {
   // Javascript is a single threaded Synchronoud Language
+  setTimeout(function () {
+    console.log("Hello Async Program");
+  }, 5000);
 
-  // SetTimeout
-  {
-    // const timeOut = setTimeout(function () {
-    //   console.log("Hello Async Program 2");
-    // }, 4000);
-  }
-
-  // setInterval
-  {
-    // function test() {
-    //   clearInterval(interval);
-    // }
-    // const interval = setInterval(function () {
-    //   console.log("Hello");
-    //   console.log("How");
-    //   console.log("Are");
-    //   console.log("You");
-    //   console.log("Interval value", interval);
-    //   test();
-    // }, 2000);
-  }
-
-  // console.log("First");
-  // console.log("Second");
-  // console.log("Third");
-}
-
-// Proises
-
-{
-  const promiseExample = new Promise(function (resolve, reject) {
-    if (!true) {
-      resolve("Hello");
-    } else {
-      reject("Hello");
-    }
-
-    // setInterval(() => {
-    //   resolve("Hello");
-    // }, 1000);
-  });
-
-  promiseExample
-    .then((valueYouReceive) => console.log("Resolved Promise", valueYouReceive))
-    .catch(function (value) {
-      console.log("Rejected Promise", value);
-    });
-
-  console.log(promiseExample);
+  console.log("First");
+  console.log("Second");
+  console.log("Third");
+  console.log("Fourth");
+  console.log("Fifth");
 }

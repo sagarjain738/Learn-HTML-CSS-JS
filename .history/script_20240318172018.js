@@ -959,22 +959,10 @@
 
 {
   const promiseExample = new Promise(function (resolve, reject) {
-    if (!true) {
-      resolve("Hello");
-    } else {
-      reject("Hello");
-    }
-
-    // setInterval(() => {
-    //   resolve("Hello");
-    // }, 1000);
+    resolve("Hello");
   });
 
-  promiseExample
-    .then((valueYouReceive) => console.log("Resolved Promise", valueYouReceive))
-    .catch(function (value) {
-      console.log("Rejected Promise", value);
-    });
-
-  console.log(promiseExample);
+  promiseExample.then((valueYouReceive) =>
+    console.log("Value You have returned", valueYouReceive)
+  );
 }

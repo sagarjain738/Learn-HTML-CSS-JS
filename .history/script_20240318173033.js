@@ -958,7 +958,7 @@
 // Proises
 
 {
-  const promiseExample = new Promise(function (resolve, reject) {
+  const promiseExample = new Promise(function (resolrve, reject) {
     if (!true) {
       resolve("Hello");
     } else {

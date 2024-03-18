@@ -937,44 +937,19 @@
 
   // setInterval
   {
-    // function test() {
-    //   clearInterval(interval);
-    // }
-    // const interval = setInterval(function () {
-    //   console.log("Hello");
-    //   console.log("How");
-    //   console.log("Are");
-    //   console.log("You");
-    //   console.log("Interval value", interval);
-    //   test();
-    // }, 2000);
+    const interval = setInterval(function () {
+      console.log("Hello");
+      console.log("How");
+      console.log("Are");
+      console.log("You");
+      console.log("Interval value", interval);
+    }, 2000);
+    function test() {
+      clearInterval(interval);
+    }
   }
 
   // console.log("First");
   // console.log("Second");
   // console.log("Third");
-}
-
-// Proises
-
-{
-  const promiseExample = new Promise(function (resolve, reject) {
-    if (!true) {
-      resolve("Hello");
-    } else {
-      reject("Hello");
-    }
-
-    // setInterval(() => {
-    //   resolve("Hello");
-    // }, 1000);
-  });
-
-  promiseExample
-    .then((valueYouReceive) => console.log("Resolved Promise", valueYouReceive))
-    .catch(function (value) {
-      console.log("Rejected Promise", value);
-    });
-
-  console.log(promiseExample);
 }

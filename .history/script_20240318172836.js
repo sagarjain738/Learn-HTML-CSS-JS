@@ -958,11 +958,11 @@
 // Proises
 
 {
-  const promiseExample = new Promise(function (resolve, reject) {
-    if (!true) {
-      resolve("Hello");
+  const promiseExample = new Promise(function (reso, reje) {
+    if (true) {
+      return resolve("Hello");
     } else {
-      reject("Hello");
+      reje("Hello");
     }
 
     // setInterval(() => {

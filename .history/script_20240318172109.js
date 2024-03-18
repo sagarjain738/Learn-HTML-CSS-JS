@@ -959,15 +959,7 @@
 
 {
   const promiseExample = new Promise(function (resolve, reject) {
-    if (!true) {
-      resolve("Hello");
-    } else {
-      reject("Hello");
-    }
-
-    // setInterval(() => {
-    //   resolve("Hello");
-    // }, 1000);
+    resolve("Hello");
   });
 
   promiseExample
@@ -975,6 +967,4 @@
     .catch(function (value) {
       console.log("Rejected Promise", value);
     });
-
-  console.log(promiseExample);
 }

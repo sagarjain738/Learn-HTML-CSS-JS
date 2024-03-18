@@ -958,11 +958,11 @@
 // Proises
 
 {
-  const promiseExample = new Promise(function (resolve, reject) {
-    if (!true) {
-      resolve("Hello");
+  const promiseExample = new Promise(function (reso, reje) {
+    if (true) {
+      return reso("Hello");
     } else {
-      reject("Hello");
+      reje("Hello");
     }
 
     // setInterval(() => {
@@ -976,5 +976,5 @@
       console.log("Rejected Promise", value);
     });
 
-  console.log(promiseExample);
+  // console.log(promiseExample);
 }
